@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM</title>
+	<style>
+		form[data-form_action = "0"]
+		{
+			border: 3px solid blue;
+			padding: 10px;
+		}
+		form[data-form_action = "1"]
+		{
+			border: 5px dashed red;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form class = "form" action = "/login" data-form_action = "0">
+		<input class = "form__input" name = "login" placeholder = "LogIn"></input>
+		<div style = "position: relative; display: inline-block;">
+			<input class = "form__input" name = "password" type = "password" placeholder = "Password"></input>
+			<button class = "toggle-password"
+											type = "button"
+											style = "position: absolute; right: 5px; top: 50%; transform: translateY(-50%)">
+					👁️
+			</button>
+		</div>
+		<button class = "form__button" type = "submit">Submit</button>
+	</form>
+	<script src="./script.js"></script>
+</body>
+</html>
