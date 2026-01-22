@@ -6,7 +6,7 @@
 /*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 22:06:29 by Pablo Escob       #+#    #+#             */
-/*   Updated: 2026/01/22 22:31:14 by Pablo Escob      ###   ########.fr       */
+/*   Updated: 2026/01/22 22:40:31 by Pablo Escob      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,16 @@ togglePswButton.addEventListener('click', () =>
 		passwordElement.type = 'text';
 		togglePswButton.textContent = '🙈';
 		formElement.classList.toggle('box');
+		formElement.classList.remove('red');   // ✅ Спочатку видаляємо червоний
+		formElement.classList.add('green');    // ✅ Потім додаємо зелений
 	}
 	else
 	{
 		passwordElement.type = 'password';
 		togglePswButton.textContent = '👁️';
 		formElement.classList.toggle('box');
+		formElement.classList.remove('green'); // ✅ Спочатку видаляємо зелений
+		formElement.classList.add('red');      // ✅ Потім додаємо червоний
 	}
 });
 

@@ -6,7 +6,7 @@
 /*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:35:15 by Pablo Escob       #+#    #+#             */
-/*   Updated: 2026/01/22 22:28:28 by Pablo Escob      ###   ########.fr       */
+/*   Updated: 2026/01/22 22:41:07 by Pablo Escob      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ const loginElement = document.querySelector('.form__input[name="login"]');
 const passwordElement = document.querySelector('.form__input[name="password"]');
 const submitButton = document.querySelector('.form__button');
 const togglePswButton = document.querySelector('.toggle-password');
-let formData = formElement;
 
 formElement.action = '/Register';
 formElement.method = '/post';
@@ -38,7 +37,6 @@ togglePswButton.style.cssText +=
 `;
 
 console.log(togglePswButton.classList);
-formElement.classList.add('yellow');
 formElement.classList.add('box');
 loginElement.style.cssText +=
 `
@@ -56,4 +54,4 @@ export
 };
 
 console.log(formElement.classList.contains('box'));
-formElement.style.setProperty('--border-color', 'red');
+formElement.style.setProperty('--border-color', 'yellow');

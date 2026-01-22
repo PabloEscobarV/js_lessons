@@ -6,7 +6,7 @@
 /*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 21:54:15 by Pablo Escob       #+#    #+#             */
-/*   Updated: 2026/01/22 22:30:36 by Pablo Escob      ###   ########.fr       */
+/*   Updated: 2026/01/22 22:37:52 by Pablo Escob      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ form[data-form_action = "1"]
 .yellow
 {
 	background-color: rgb(228, 196, 14);
+}
+
+.green
+{
+	background-color: rgb(0, 255, 0);
 }
