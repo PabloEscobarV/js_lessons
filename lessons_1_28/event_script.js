@@ -6,11 +6,11 @@
 /*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 22:06:29 by Pablo Escob       #+#    #+#             */
-/*   Updated: 2026/01/22 23:55:16 by Pablo Escob      ###   ########.fr       */
+/*   Updated: 2026/01/22 22:40:31 by Pablo Escob      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-import * as elements from './lessons_1_28/script.js';
+import * as elements from './script.js';
 
 const
 {

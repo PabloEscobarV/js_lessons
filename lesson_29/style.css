@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   style.css                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/22 23:55:44 by Pablo Escob       #+#    #+#             */
+/*   Updated: 2026/01/23 00:19:59 by Pablo Escob      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+body
+{
+	margin: 0;
+}
+
+.box
+{
+	overflow: auto;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	background-color: lightseagreen;
+	border: 20px solid red;
+}
