@@ -6,7 +6,7 @@
 /*   By: Pablo Escobar <sataniv.rider@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:35:15 by Pablo Escob       #+#    #+#             */
-/*   Updated: 2026/01/21 00:24:20 by Pablo Escob      ###   ########.fr       */
+/*   Updated: 2026/01/22 22:28:28 by Pablo Escob      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,57 +18,42 @@ const passwordElement = document.querySelector('.form__input[name="password"]');
 const submitButton = document.querySelector('.form__button');
 const togglePswButton = document.querySelector('.toggle-password');
 let formData = formElement;
-let submit_clicked = false;
 
-console.log(formElement);
-console.log(loginElement);
-console.log(passwordElement);
-console.log(submitButton);
-console.log(formElement.action);
 formElement.action = '/Register';
-console.log(formElement.action);
 formElement.method = '/post';
-console.log(formElement.method);
 formElement.ariaHidden = 'true';
 formElement.ariaLabel = 'Form for registration';
 loginElement.setAttribute('value', 'ADMIN');
-console.log(loginElement.value);
-formElement.addEventListener('submit', (event) =>
+formElement.style.position = "absolute";
+console.log(togglePswButton.style);
+togglePswButton.style.position = "absolute";
+togglePswButton.style.right = "5px";
+togglePswButton.style.top = "50%";
+togglePswButton.style.transform = "translateY(-50%)";
+togglePswButton.style.cssText +=
+`
+	border-width: 1px;
+	border-color: rgb(58, 110, 38);
+	border-style: solid;
+`;
+
+console.log(togglePswButton.classList);
+formElement.classList.add('yellow');
+formElement.classList.add('box');
+loginElement.style.cssText +=
+`
+	border-width: 5px;
+	border-color: rgba(44, 5, 5, 0.99);
+`;
+
+export
 {
-	event.preventDefault();
+	formElement,
+	loginElement,
+	passwordElement,
+	submitButton,
+	togglePswButton,
+};
 
-	console.log(`Login: ${loginElement.value}`);
-	console.log(`Password: ${passwordElement.value}`);
-
-	alert(`Login: ${loginElement.value}\nPassword: ${passwordElement.value}`);
-});
-
-togglePswButton.addEventListener('click', () =>
-{
-	if (passwordElement.type === 'password')
-	{
-		passwordElement.type = 'text';
-		togglePswButton.textContent = '🙈';
-	}
-	else
-	{
-		passwordElement.type = 'password';
-		togglePswButton.textContent = '👁️';
-	}
-});
-
-submitButton.addEventListener('click', () =>
-{
-	submit_clicked = !submit_clicked;
-	if (submit_clicked)
-	{
-		submitButton.textContent = 'Submitted!';
-		formElement.dataset.form_action = '1'; 
-	}
-	else
-	{
-		submitButton.textContent = 'Submit';
-		formElement.dataset.form_action = '0'; // ✅ Повертаємо назад
-	}
-
-});
+console.log(formElement.classList.contains('box'));
+formElement.style.setProperty('--border-color', 'red');
